@@ -6,6 +6,7 @@ import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -343,6 +344,63 @@ public class WDU_Test {
 		}
 		
 	}
+	
+	// this method is used to check if the element is displayed
+	//@param element 
+	public void isDisplayed(WebElement element) {
+		try {
+			element.isDisplayed();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	// this method is used to check if the element is enabled
+	//@param element 
+	public void isEnabled(WebElement element) {
+		try {
+			element.isEnabled();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	// this method is used to check if the element is selected
+	//@param element 
+	public void isSelected(WebElement element) {
+		try {
+			element.isSelected();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	// this method is used to scroll the webpage
+	//@param driver
+	public void scrollWebPage(WebDriver driver) {
+		try {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0,800)");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	// this method is used to execute javascript commands 
+	//@param driver
+	public void executeJavascriptCommand(WebDriver driver,String command) {
+		try {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript(command);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
 	
 	
 

@@ -334,6 +334,15 @@ public class WDU_Test {
 		}
 		
 	}
+	// this method is for hard wait 
+	public void hardWait(int time) {
+		try {
+			Thread.sleep(time);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
 	
 	
 

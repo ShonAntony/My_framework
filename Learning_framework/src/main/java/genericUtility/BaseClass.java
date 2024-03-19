@@ -18,6 +18,7 @@ public class BaseClass {
 	WebDriverUtility wLib = new WebDriverUtility();
 	
 	public WebDriver driver;
+	public static WebDriver sdriver;
 	
 
 	// this method is to connect to the database before the suite execution 
@@ -31,20 +32,15 @@ public class BaseClass {
 	// this method is to launch the specific browser
 	@BeforeClass
 	public void configBC() {
-		String browser =  fLib.getValueFromPropertyFile("browser");
-		System.out.println("the browser is"+browser);
-		if(browser.equalsIgnoreCase("chrome"))
-		{
-			driver = new ChromeDriver();
-		}
-		else if(browser.equalsIgnoreCase("firefox")) {
-			driver = new FirefoxDriver();
-		}
-		else {
-			driver = new ChromeDriver();
-		}
-		wLib.maximizeBrowserWindow(driver);
-		System.out.println("browser is launched");
+		/*
+		 * String browser = fLib.getValueFromPropertyFile("browser");
+		 * System.out.println("the browser is"+browser);
+		 * if(browser.equalsIgnoreCase("chrome")) { driver = new ChromeDriver(); } else
+		 * if(browser.equalsIgnoreCase("firefox")) { driver = new FirefoxDriver(); }
+		 * else { driver = new ChromeDriver(); } wLib.maximizeBrowserWindow(driver);
+		 * System.out.println("browser is launched");
+		 */
+		System.out.println("browser opened");
 	}
 	
 	// this method is to login to the application 
@@ -63,13 +59,15 @@ public class BaseClass {
 	// this method is to close the browser
 	@AfterClass
 	public void configAC() {
-		driver.quit();
+		/* driver.quit(); */
+		System.out.println("");
 	}
 	
 	//this method is to close the database connection 
 	@AfterSuite
 	public void configAS() {
-		dLib.closeDB();
+		/* dLib.closeDB(); */
+		System.out.println("DB closed");
 	}
 	
 }

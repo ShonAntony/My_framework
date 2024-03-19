@@ -3,12 +3,16 @@ package genericUtility;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.io.File;
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -259,6 +263,22 @@ public class WebDriverUtility {
 			e.printStackTrace();
 		}
 		
+	}
+	
+	
+	
+	// this method is to take the screen shot of the failed script screen
+	public static String takeSS(WebDriver driver , String ssName) {
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		String path = "./screenshot/"+ssName+".png";
+		File dest = new File(path);
+		try {
+			FileUtils.copyFile(src, dest);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }

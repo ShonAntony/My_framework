@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-19T13:39:35 IST" name="Default suite" finished-at="2024-03-19T13:39:35 IST" duration-ms="30">
+    <groups>
+    </groups>
+    <test started-at="2024-03-19T13:39:35 IST" name="Default test" finished-at="2024-03-19T13:39:35 IST" duration-ms="30">
+      <class name="test.ListnerTest">
+        <test-method is-config="true" signature="dbConnect()[pri:0, instance:test.ListnerTest@5c5eefef]" started-at="2024-03-19T13:39:35 IST" name="dbConnect" finished-at="2024-03-19T13:39:35 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dbConnect -->
+        <test-method is-config="true" signature="configBC()[pri:0, instance:test.ListnerTest@5c5eefef]" started-at="2024-03-19T13:39:35 IST" name="configBC" finished-at="2024-03-19T13:39:35 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBC -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:test.ListnerTest@5c5eefef]" started-at="2024-03-19T13:39:35 IST" name="configBM" finished-at="2024-03-19T13:39:35 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="test1()[pri:0, instance:test.ListnerTest@5c5eefef]" started-at="2024-03-19T13:39:35 IST" name="test1" finished-at="2024-03-19T13:39:35 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:test.ListnerTest@5c5eefef]" started-at="2024-03-19T13:39:35 IST" name="configAM" finished-at="2024-03-19T13:39:35 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:test.ListnerTest@5c5eefef]" started-at="2024-03-19T13:39:35 IST" name="configAC" finished-at="2024-03-19T13:39:35 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+        <test-method is-config="true" signature="configAS()[pri:0, instance:test.ListnerTest@5c5eefef]" started-at="2024-03-19T13:39:35 IST" name="configAS" finished-at="2024-03-19T13:39:35 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAS -->
+      </class> <!-- test.ListnerTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

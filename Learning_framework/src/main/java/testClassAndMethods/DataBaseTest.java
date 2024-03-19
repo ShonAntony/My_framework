@@ -22,7 +22,8 @@ public class DataBaseTest {
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc_test", "root", "Shonantony123#");
 		// here we can initially create a statement and then using that statement variable we can execute the query 
 		ResultSet res = con.createStatement().executeQuery("SELECT * FROM test;");
-		// here we are running the while loop to get all the column values based on the index
+		// here we are running the while loop to get all the column values based on the index and the next() will go column by column and 
+		// and print out all the value
 		while (res.next()) {
 			for (int i = 1; i < 4; i++) {
 				System.out.print(res.getString(i)+" ");

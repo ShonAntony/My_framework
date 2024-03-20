@@ -23,15 +23,15 @@ public class ListenerImp implements ITestListener{
 	public void onTestFailure(ITestResult result) {
 		
 		
-		System.out.println("------------------------------the test script has failed---------------------");
-
-		String method = result.getMethod().getMethodName();
-		try {
-			String failedScript = WebDriverUtility.takeSS(BaseClass.sdriver, method);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		ITestListener.super.onTestFailure(result);
+		/*
+		 * System.out.
+		 * println("------------------------------the test script has failed---------------------"
+		 * );
+		 * 
+		 * String method = result.getMethod().getMethodName(); try { String failedScript
+		 * = WebDriverUtility.takeSS(BaseClass.sdriver, method); } catch (Exception e) {
+		 * e.printStackTrace(); } ITestListener.super.onTestFailure(result);
+		 */
 	}
 
 	@Override

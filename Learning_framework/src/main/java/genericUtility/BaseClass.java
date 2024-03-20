@@ -28,7 +28,7 @@ public class BaseClass {
 
 	// this method is to launch the specific browser
 	@BeforeClass
-	public void configBC() {
+	public void configBC() throws Exception {
 
 		String browser = fLib.getValueFromPropertyFile("browser");
 		System.out.println("the browser is" + browser);
@@ -43,6 +43,7 @@ public class BaseClass {
 		System.out.println("browser is launched");
 
 		System.out.println("browser opened");
+
 	}
 
 	// this method is to login to the application

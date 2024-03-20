@@ -1,6 +1,7 @@
 package genericUtility;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
 
 public class FileUtility {
@@ -8,16 +9,14 @@ public class FileUtility {
 	// this method is used to get the value from the property file by passing the
 	// key
 	// @param Key
-	public String getValueFromPropertyFile(String key) {
-		String value = null;
-		try {
-			FileInputStream fis = new FileInputStream("");
+	public String getValueFromPropertyFile(String key) throws Exception {
+		
+		
+			FileInputStream fis = new FileInputStream(IpathConstants.propertyFilePath);
 			Properties pro = new Properties();
 			pro.load(fis);
-			value = pro.getProperty(key);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+			String value = pro.getProperty(key);
+		
 		return value;
 	}
 

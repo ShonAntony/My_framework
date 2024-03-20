@@ -5,6 +5,6 @@ public interface IpathConstants {
 	String dbPassword = "";
 	String dbURL = "";
 	String excelPath = "";
-	String propertyFilePath = "";
+	String propertyFilePath = "./src/main/resources/testdata/prop.properties";
 
 }

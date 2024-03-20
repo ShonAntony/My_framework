@@ -282,8 +282,8 @@ public class WDU_Test {
 			e.printStackTrace();
 		}
 	}
-	
-	// this method is to press the ENTER button 
+
+	// this method is to press the ENTER button
 	// @param driver
 	public void pressEnter(WebDriver driver) {
 		try {
@@ -293,7 +293,8 @@ public class WDU_Test {
 			e.printStackTrace();
 		}
 	}
-	// this method is to press the TAB button 
+
+	// this method is to press the TAB button
 	// @param driver
 	public void pressTab(WebDriver driver) {
 		try {
@@ -303,8 +304,8 @@ public class WDU_Test {
 			e.printStackTrace();
 		}
 	}
-	
-	// this method is to press the UP arrow button 
+
+	// this method is to press the UP arrow button
 	// @param driver
 	public void pressUpArrow(WebDriver driver) {
 		try {
@@ -314,8 +315,8 @@ public class WDU_Test {
 			e.printStackTrace();
 		}
 	}
-	
-	// this method is to press the DOWN arrow button 
+
+	// this method is to press the DOWN arrow button
 	// @param driver
 	public void pressDownArrow(WebDriver driver) {
 		try {
@@ -325,61 +326,62 @@ public class WDU_Test {
 			e.printStackTrace();
 		}
 	}
-	
-	// this method is for hard wait 
+
+	// this method is for hard wait
 	public void hardWait() {
 		try {
 			Thread.sleep(2000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	// this method is for hard wait 
+
+	// this method is for hard wait
 	public void hardWait(int time) {
 		try {
 			Thread.sleep(time);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	// this method is used to check if the element is displayed
-	//@param element 
+	// @param element
 	public void isDisplayed(WebElement element) {
 		try {
 			element.isDisplayed();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	// this method is used to check if the element is enabled
-	//@param element 
+	// @param element
 	public void isEnabled(WebElement element) {
 		try {
 			element.isEnabled();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	// this method is used to check if the element is selected
-	//@param element 
+	// @param element
 	public void isSelected(WebElement element) {
 		try {
 			element.isSelected();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	// this method is used to scroll the webpage
-	//@param driver
+	// @param driver
 	public void scrollWebPage(WebDriver driver) {
 		try {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -388,10 +390,10 @@ public class WDU_Test {
 			e.printStackTrace();
 		}
 	}
-	
-	// this method is used to execute javascript commands 
-	//@param driver
-	public void executeJavascriptCommand(WebDriver driver,String command) {
+
+	// this method is used to execute javascript commands
+	// @param driver
+	public void executeJavascriptCommand(WebDriver driver, String command) {
 		try {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript(command);
@@ -399,9 +401,5 @@ public class WDU_Test {
 			e.printStackTrace();
 		}
 	}
-	
-	
-	
-	
 
 }

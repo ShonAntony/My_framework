@@ -27,7 +27,7 @@ public class ListenerImp implements ITestListener{
 
 		String method = result.getMethod().getMethodName();
 		try {
-			//String failedScript = WebDriverUtility.takeSS(BaseClass.sdriver, method);
+			String failedScript = WebDriverUtility.takeSS(BaseClass.sdriver, method);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

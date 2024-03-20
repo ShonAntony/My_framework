@@ -4,11 +4,12 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 public class FileUtility {
-	
-	//this method is used to get the value from the property file by passing the key
-	//@param Key
+
+	// this method is used to get the value from the property file by passing the
+	// key
+	// @param Key
 	public String getValueFromPropertyFile(String key) {
-		String value=null;
+		String value = null;
 		try {
 			FileInputStream fis = new FileInputStream("");
 			Properties pro = new Properties();

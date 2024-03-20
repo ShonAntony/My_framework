@@ -63,7 +63,7 @@ public class BaseClass {
 	@AfterClass
 	public void configAC() {
 		/* driver.quit(); */
-		System.out.println("");
+		System.out.println("the browser is closed");
 	}
 
 	// this method is to close the database connection

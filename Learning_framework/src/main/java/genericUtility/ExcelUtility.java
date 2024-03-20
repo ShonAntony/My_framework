@@ -58,19 +58,19 @@ public class ExcelUtility {
 		}
 		return map;
 	}
-	
+
 	// this method is to get multiple sets of data
 	public Object[][] getMultipleSetsOfData(String sheetName) {
-		Object obj[][]=null;
+		Object obj[][] = null;
 		try {
 			FileInputStream fis = new FileInputStream("");
 			Workbook wb = WorkbookFactory.create(fis);
 			int lastRow = wb.getSheet(sheetName).getLastRowNum();
 			int lastCol = wb.getSheet(sheetName).getRow(1).getLastCellNum();
-			obj= new Object[lastCol+1][lastCol];
+			obj = new Object[lastCol + 1][lastCol];
 			for (int i = 0; i < lastRow; i++) {
 				for (int j = 0; j < lastCol; j++) {
-					obj[i][j]= wb.getSheet(sheetName).getRow(i).getCell(j).getStringCellValue();
+					obj[i][j] = wb.getSheet(sheetName).getRow(i).getCell(j).getStringCellValue();
 				}
 			}
 		} catch (Exception e) {

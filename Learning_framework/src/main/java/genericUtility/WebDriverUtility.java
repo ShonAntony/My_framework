@@ -268,8 +268,8 @@ public class WebDriverUtility {
 	
 	
 	// this method is to take the screen shot of the failed script screen
-	public static String takeSS(WebDriver driver , String ssName) {
-		TakesScreenshot ts = (TakesScreenshot)driver;
+	public static String takeSS(WebDriver sdriver , String ssName) {
+		TakesScreenshot ts = (TakesScreenshot)sdriver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		String path = "./screenshot/"+ssName+".png";
 		File dest = new File(path);

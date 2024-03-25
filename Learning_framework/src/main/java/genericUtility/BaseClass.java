@@ -10,11 +10,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseClass {
-	DatabaseUtility dLib = new DatabaseUtility();
-	DatabaseUtility eLib = new DatabaseUtility();
-	FileUtility fLib = new FileUtility();
-	WebDriverUtility wLib = new WebDriverUtility();
+	public DatabaseUtility dLib = new DatabaseUtility();
+	public DatabaseUtility eLib = new DatabaseUtility();
+	public FileUtility fLib = new FileUtility();
+	public WebDriverUtility wLib = new WebDriverUtility();
 
 	public WebDriver driver;
 	public static WebDriver sdriver;
@@ -33,8 +35,10 @@ public class BaseClass {
 		String browser = fLib.getValueFromPropertyFile("browser");
 		System.out.println("the browser is" + browser);
 		if (browser.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		} else {
 			driver = new ChromeDriver();
@@ -43,13 +47,17 @@ public class BaseClass {
 		System.out.println("browser is launched");
 
 		System.out.println("browser opened");
-
+		wLib.maximizeBrowserWindow(driver);
+		
 	}
 
 	// this method is to login to the application
 	@BeforeMethod
-	public void configBM() {
+	public void configBM() throws Exception {
+		String url= fLib.getValueFromPropertyFile("url");
+		driver.get(url);
 		System.out.println("the user has logged in");
+		
 		// here we need to get the username and the password from the property file and
 		// then use it
 	}
@@ -63,7 +71,7 @@ public class BaseClass {
 	// this method is to close the browser
 	@AfterClass
 	public void configAC() {
-		/* driver.quit(); */
+		//driver.quit();
 		System.out.println("the browser is closed");
 	}
 

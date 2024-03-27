@@ -1,5 +1,6 @@
 package test;
 
+import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -39,6 +40,7 @@ public class test101 extends BaseClass {
 		m.getEmailTxtFld().sendKeys(email);
 		m.getPwdTxtFld().sendKeys(password);
 		m.getLoginBtn().click();
+
 		
 	}
 	

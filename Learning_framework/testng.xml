@@ -1,0 +1,15 @@
+<!-- here basically we can give any name to the suite and the test according to what is required-->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!--this is the name of the entire testNG file and that is given as the suite name-->
+<suite name="test-suite" >
+<!--this is the name given to the type of test that is performed-->
+   <test name="Regression" >
+<!-- this is where we write the classes which needs to be a part of that test-->
+       <classes> 
+<!-- below we keep adding the test classes which needs to be run in that specific test and here we need to start from the 
+                                packagName.classNmae-->
+          <class name="test.Test101" />
+       </classes>
+   </test>
+ </suite>
+ 

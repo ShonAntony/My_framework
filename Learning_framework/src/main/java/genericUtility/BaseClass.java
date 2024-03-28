@@ -71,7 +71,7 @@ public class BaseClass {
 	// this method is to close the browser
 	@AfterClass
 	public void configAC() {
-		//driver.quit();
+		driver.quit();
 		System.out.println("the browser is closed");
 	}
 

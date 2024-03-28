@@ -1,6 +1,5 @@
 package test;
 
-import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -9,7 +8,7 @@ import pages.MainPage;
 
 @Listeners(genericUtility.ListenerImp.class)
 
-public class test101 extends BaseClass {
+public class Test101 extends BaseClass {
 	MainPage m;
 	
 	@Test

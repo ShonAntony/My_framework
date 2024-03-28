@@ -30,8 +30,7 @@ public class To_Get_The_Network_Logs {
 		for (LogEntry logEntry : logEntries) {
 			System.out.println(logEntry.getMessage());
 		}
-		
-
+		driver.quit();
 	}
 
 }

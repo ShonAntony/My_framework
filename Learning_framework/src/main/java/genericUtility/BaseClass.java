@@ -1,5 +1,7 @@
 package genericUtility;
 
+import java.sql.SQLException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -23,9 +25,12 @@ public class BaseClass {
 
 	// this method is to connect to the database before the suite execution
 	@BeforeSuite
-	public void dbConnect() {
+	public void dbConnect() throws SQLException {
 		System.out.println("the database is connected");
-		// dLib.connectToDB();
+		dLib.connectToDB();
+		String query = "SELECT * FROM test;";
+		System.out.println(
+				dLib.excuteQueryAndReturnData(query, 2, "monkey") + " --> this is for the DB check and the connection");
 	}
 
 	// this method is to launch the specific browser
@@ -33,7 +38,7 @@ public class BaseClass {
 	public void configBC() throws Exception {
 
 		String browser = fLib.getValueFromPropertyFile("browser");
-		System.out.println("the browser is" + browser);
+		System.out.println("the browser is " + browser);
 		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -48,16 +53,16 @@ public class BaseClass {
 
 		System.out.println("browser opened");
 		wLib.maximizeBrowserWindow(driver);
-		
+
 	}
 
 	// this method is to login to the application
 	@BeforeMethod
 	public void configBM() throws Exception {
-		String url= fLib.getValueFromPropertyFile("url");
+		String url = fLib.getValueFromPropertyFile("url");
 		driver.get(url);
 		System.out.println("the user has logged in");
-		
+
 		// here we need to get the username and the password from the property file and
 		// then use it
 	}
@@ -78,7 +83,7 @@ public class BaseClass {
 	// this method is to close the database connection
 	@AfterSuite
 	public void configAS() {
-		/* dLib.closeDB(); */
+		dLib.closeDB();
 		System.out.println("DB closed");
 	}
 
